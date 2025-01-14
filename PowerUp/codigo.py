@@ -81,7 +81,7 @@ for linha in table.index:
 
     # OBS
     obs = table.loc[linha, "obs"]
-    if obs != "nan": 
+    if not pd.isna(obs): 
         pyautogui.write(obs)
     pyautogui.press("tab") 
 
